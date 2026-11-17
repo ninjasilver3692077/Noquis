@@ -1,0 +1,386 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#f4cfda">
+<title>7 meses, 7 razones para elegirte</title>
+<style>
+:root{--ink:#241421;--sub:#624854;--white:#fff9f7;--accent:#831c4b;--glass:#fff8fa95;--edge:#fffc;--round:29px}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+body{margin:0;min-height:100svh;color:var(--ink);font-family:system-ui,-apple-system,sans-serif;background:radial-gradient(ellipse at 22% 32%,#e999af 0%,transparent 55%),radial-gradient(ellipse at 93% 75%,#cab8ff 0%,transparent 58%),linear-gradient(148deg,#f9e5ed 0%,#f1c6d3 56%,#fbf6fe 100%);background-attachment:fixed}
+button{font:inherit;color:inherit;cursor:pointer}
+button:focus-visible,[tabindex]:focus-visible{outline:3px solid #852451;outline-offset:4px}
+svg.ico{width:23px;height:23px;vertical-align:middle;fill:none;stroke:currentColor;stroke-width:1.65;stroke-linecap:round;stroke-linejoin:round}
+.shell{width:min(1060px,calc(100% - 56px));margin:auto;padding:24px 0 118px}
+header{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:clamp(24px,4.9vh,52px)}
+.brand,.status{display:flex;align-items:center;gap:10px;min-height:49px;padding:5px 15px 5px 6px;background:var(--glass);border:1px solid var(--edge);border-radius:100px}
+.brand strong{display:block;font-size:.86rem;line-height:1.12}.brand small{font-size:.68rem;color:var(--sub)}
+.avatar,.stamp{display:grid;place-items:center;flex:none;border-radius:50%;width:37px;height:37px;background:linear-gradient(142deg,#e781aa,#f4bad1 53%,#d7c4f8);color:#521636;border:1px solid #fffa}
+.avatar .ico{width:19px;height:19px}
+.status{gap:8px;padding-inline:14px;font-size:.71rem;font-weight:750;white-space:nowrap}
+.dot{width:7px;height:7px;border-radius:50%;background:#9b3964;box-shadow:0 0 0 4px #9b396416}
+.grid{display:grid;grid-template-columns:minmax(0,.87fr) minmax(0,1.13fr);gap:clamp(24px,5vw,70px);align-items:center}
+.intro{min-width:0}
+.eyebrow{display:inline-flex;gap:7px;align-items:center;border:1px solid #fff9;background:#fff4;padding:7px 12px;border-radius:100px;font-size:.63rem;letter-spacing:.17em;font-weight:800;text-transform:uppercase}
+h1,h2,p{margin:0}
+h1{font-size:clamp(3.4rem,7.3vw,6.45rem);line-height:.91;letter-spacing:-.092em;margin:15px 0}
+h1 em{font-weight:540;color:#6d2448;white-space:nowrap}
+.lede{font-size:.96rem;line-height:1.52;max-width:33ch;color:var(--sub)}
+.stories-head{display:flex;align-items:center;justify-content:space-between;gap:8px;margin:26px 0 9px;font-size:.78rem;font-weight:800}
+.stories-head span:last-child{font-size:.65rem;font-weight:600;color:var(--sub)}
+.stories{display:grid;grid-template-columns:repeat(7,minmax(48px,1fr));gap:6px;padding:4px 3px 7px;margin:0 -3px;overflow-x:auto;scrollbar-width:none}
+.stories::-webkit-scrollbar{display:none}
+.story{position:relative;min-height:67px;aspect-ratio:.75;border:1px solid #fff9;border-radius:16px;background:radial-gradient(at 22% 13%,var(--light),transparent 65%),var(--tone);color:var(--dark);display:grid;place-items:center;padding:10px 4px 18px;transition:transform .2s,box-shadow .2s}
+.story:hover{transform:translateY(-2px)}
+.story[aria-current=true]{box-shadow:0 0 0 2px var(--ink);border-color:white}
+.story .ico{width:clamp(17px,2.5vw,26px);height:clamp(17px,2.5vw,26px)}
+.story small{position:absolute;bottom:5px;font-size:.59rem;font-weight:850;letter-spacing:.07em}
+.card{min-width:0;background:#fff9f7ec;padding:9px;border:1px solid #ffffffe0;border-radius:var(--round);box-shadow:0 20px 55px #6c375725,0 1px 2px #8d4a571b}
+.cover-art{min-height:245px;aspect-ratio:1.55;border-radius:22px;isolation:isolate;overflow:hidden;position:relative;background:radial-gradient(ellipse at 63% 40%,var(--light,#ffd3cc),transparent 65%),linear-gradient(135deg,var(--tone,#ed98b3),var(--deep,#cbb9f4));color:var(--dark,#6d2448)}
+.cover-art::before{content:"";position:absolute;inset:0;pointer-events:none;z-index:2;opacity:.18;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 170 170' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.73' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Cpath d='M0 0h170v170H0z' filter='url(%23g)' opacity='.64'/%3E%3C/svg%3E")}
+.hero-art{position:absolute;width:100%;height:100%;inset:0}
+.float-label,.art-index{position:absolute;z-index:3;display:flex;align-items:center;gap:8px;padding:5px 10px 5px 6px;border-radius:100px;border:1px solid #fff9;background:#fff9;backdrop-filter:blur(16px);color:#44233a}
+.float-label{top:11px;left:11px;font-weight:750;font-size:.69rem}
+.stamp{width:26px;height:26px;background:#fff9}.stamp .ico{width:15px;height:15px}
+.art-index{bottom:11px;right:11px;padding:7px 11px;font-size:.63rem;letter-spacing:.12em;font-weight:820}
+.art-photo{width:100%;height:100%;object-fit:cover;position:absolute;inset:0}
+.symbol-art{position:absolute;inset:0;display:grid;place-items:center}
+.symbol-art:before,.symbol-art:after{content:"";position:absolute;width:45%;aspect-ratio:1;border:1px solid #fff9;border-radius:50%;transform:rotate(-28deg) scaleY(.54)}
+.symbol-art:after{transform:rotate(32deg) scaleY(.75);width:57%;border-style:dashed}
+.symbol-art .ico{position:relative;z-index:1;width:26%;height:auto;aspect-ratio:1;fill:#fff4;stroke-width:1.06;filter:drop-shadow(0 12px 15px #5b25433e);transform:rotate(-11deg)}
+.spark{color:#fffdf8;position:absolute;font:1.5rem Georgia,serif;z-index:1}
+.sp1{left:19%;top:56%}.sp2{right:21%;top:27%;font-size:2rem}.sp3{right:27%;bottom:18%;font-size:1rem}
+.card-body{padding:15px 12px 9px}
+.meta{display:flex;align-items:center;gap:7px;color:var(--accent);font-size:.64rem;letter-spacing:.14em;text-transform:uppercase;font-weight:850;margin-bottom:6px}
+h2{font-size:clamp(1.65rem,3.3vw,2.45rem);line-height:1;letter-spacing:-.062em}
+.message{margin-top:9px;font-size:.91rem;line-height:1.56;color:#47323e;max-width:58ch}
+.controls{display:flex;gap:7px;margin-top:14px}
+.pill{display:flex;align-items:center;justify-content:space-between;gap:10px;min-height:46px;border:0;border-radius:100px;padding:5px 5px 5px 14px;background:#231522;color:#fff9fc;font-size:.84rem;font-weight:720;flex:1;text-align:left}
+.pill:hover{background:#49203b}
+.pill .circle{display:grid;place-items:center;width:36px;height:36px;background:#fff9fc;color:#261824;border-radius:50%;flex:none}
+.pill .ico,.previous .ico{width:18px;height:18px}
+.previous{width:46px;min-height:46px;flex:none;background:#f8e8ef;border:1px solid #e9d3df;border-radius:50%}
+.previous:hover{background:#f0d7e4}
+.dock-wrap{position:fixed;z-index:5;bottom:0;left:0;right:0;display:flex;justify-content:center;padding:12px 12px max(11px,env(safe-area-inset-bottom));background:linear-gradient(transparent,#faf1faec 84%);pointer-events:none}
+.dock{pointer-events:auto;display:flex;align-items:center;gap:5px;background:#20141f;color:white;padding:5px;border-radius:100px;box-shadow:0 14px 32px #57204031}
+.dock button{display:flex;align-items:center;justify-content:center;gap:7px;padding:0 14px;min-height:44px;border:0;border-radius:100px;background:#3d303d;color:#ffeff8;font-size:.76rem;font-weight:650;white-space:nowrap}
+.dock button[aria-current=page]{background:#fff9fb;color:#221421}
+.dock button:hover:not([aria-current=page]){background:#514153}
+.dock .ico{width:18px;height:18px}
+.fade{animation:slide .28s ease-out both}
+@keyframes slide{from{opacity:.3;transform:translateY(5px)}to{opacity:1;transform:none}}
+@media(max-width:730px){
+ .shell{width:min(480px,calc(100% - 30px));padding-top:15px;padding-bottom:99px}
+ header{margin-bottom:19px}
+ .grid{grid-template-columns:1fr;gap:10px}
+ h1{font-size:clamp(2.95rem,13.2vw,4.75rem);margin:10px 0}
+ .lede{font-size:.82rem}
+ .eyebrow{font-size:.57rem;padding:5px 9px}
+ .stories-head{margin-top:13px;margin-bottom:6px}
+ .story{min-height:57px;aspect-ratio:.96;border-radius:13px}
+ .story .ico{width:21px;height:21px}
+ .cover-art{min-height:0;aspect-ratio:1.65}
+ .card-body{padding:11px 8px 5px}
+ .message{font-size:.86rem}
+ body[data-page]:not([data-page=inicio]) h1{font-size:clamp(1.95rem,7vw,2.85rem)}
+ body[data-page]:not([data-page=inicio]) h1 br{display:none}
+ body[data-page]:not([data-page=inicio]) .lede{display:none}
+}
+@media(max-width:355px){.dock button{padding-inline:10px}.status{padding-inline:10px}.stories{gap:5px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+
+.story{overflow:hidden}
+.story img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.story.has-photo small{z-index:1;background:#241421b8;color:white;border-radius:12px;padding:2px 6px}
+.edit-launch{display:block;margin:21px auto 0;border:1px solid #fff9;background:#fff7;border-radius:100px;padding:10px 17px;font-size:.78rem}
+dialog{width:min(660px,calc(100% - 24px));max-height:86svh;padding:22px;border:1px solid white;border-radius:27px;background:#fff5f8;color:var(--ink);box-shadow:0 20px 100px #30102860}
+dialog::backdrop{background:#28132678;backdrop-filter:blur(8px)}
+.editor-head{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.editor-head h2{font-size:1.8rem}
+.editor-help{font-size:.82rem;line-height:1.5;color:var(--sub);margin:12px 0}
+.photo-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.photo-slot{padding:10px;background:white;border:1px solid #edd9e2;border-radius:18px;min-width:0}
+.photo-slot strong{display:block;font-size:.76rem;margin-bottom:8px}
+.photo-preview{width:100%;aspect-ratio:1.65;object-fit:cover;border-radius:10px;background:linear-gradient(130deg,#f7d1dc,#dfcff9)}
+.photo-slot label{display:block;font-size:.73rem;margin-top:8px}
+.photo-slot input[type=file]{width:100%;font-size:.7rem;margin-top:4px}
+.photo-slot input[type=range]{width:100%;accent-color:#831c4b}
+.photo-slot input[type=text]{width:100%;border:1px solid #dfc9d4;border-radius:6px;padding:6px;font:inherit;font-size:.74rem}
+.remove-photo{font-size:.71rem;background:transparent;border:0;text-decoration:underline;padding:6px 0;color:#831c4b}
+.editor-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:15px}
+.editor-actions button{border:0;border-radius:100px;min-height:44px;padding:10px 16px;background:#241421;color:white;font-size:.8rem}
+.editor-actions button:disabled{opacity:.5;cursor:wait}
+#photo-status{font-size:.79rem;line-height:1.45;margin-top:12px;color:#69304a}
+@media(max-width:380px){.photo-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body data-page="inicio">
+<svg xmlns="http://www.w3.org/2000/svg" width="0" height="0" style="position:absolute;overflow:hidden" aria-hidden="true">
+<defs>
+<symbol id="i-heart" viewBox="0 0 24 24"><path d="M20.8 5.8a4.5 4.5 0 0 0-6.4 0L12 8.2 9.6 5.8a4.5 4.5 0 0 0-6.4 6.4l2.4 2.4L12 21l8.8-8.8a4.5 4.5 0 0 0 0-6.4Z"/></symbol>
+<symbol id="i-home" viewBox="0 0 24 24"><path d="m3 10 9-7 9 7M5 9v11h5v-6h4v6h5V9"/></symbol>
+<symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="m4 7 8 6 8-6"/></symbol>
+<symbol id="i-grid" viewBox="0 0 24 24"><rect x="4" y="4" width="6" height="6" rx="1.5"/><rect x="14" y="4" width="6" height="6" rx="1.5"/><rect x="4" y="14" width="6" height="6" rx="1.5"/><rect x="14" y="14" width="6" height="6" rx="1.5"/></symbol>
+<symbol id="i-right" viewBox="0 0 24 24"><path d="M4 12h15m-6-6 6 6-6 6"/></symbol>
+<symbol id="i-left" viewBox="0 0 24 24"><path d="M20 12H5m6-6-6 6 6 6"/></symbol>
+<symbol id="i-smile" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.6"/><path d="M8 13.5s1.1 2.7 4 2.7 4-2.7 4-2.7M9 9.4h.1m5.9 0h.1"/></symbol>
+<symbol id="i-cup" viewBox="0 0 24 24"><path d="M4 8h13v6a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5V8Zm13 2h2a2 2 0 0 1 0 4h-2M8 5V3m5 2V3"/></symbol>
+<symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4.4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/></symbol>
+<symbol id="i-chat" viewBox="0 0 24 24"><path d="M20.5 11a8.5 8.5 0 0 1-8.5 8.5c-1.4 0-2.6-.2-3.7-.8L4 20l1.3-4A8.5 8.5 0 1 1 20.5 11Z"/><path d="M8.5 11h.1m3.4 0h.1m3.4 0h.1"/></symbol>
+<symbol id="i-sparkle" viewBox="0 0 24 24"><path d="M12 3c1 5 3.4 7.5 8.5 9-5.1 1.5-7.5 4-8.5 9-1-5-3.4-7.5-8.5-9 5.1-1.5 7.5-4 8.5-9Z"/></symbol>
+<symbol id="i-moon" viewBox="0 0 24 24"><path d="M19 15a8.4 8.4 0 0 1-10-10.4A8.6 8.6 0 1 0 19 15Z"/><path d="M17 4v5m-2.5-2.5h5"/></symbol>
+</defs>
+</svg>
+<div class="shell">
+<header>
+  <div class="brand"><span class="avatar" aria-hidden="true"><svg class="ico"><use href="#i-heart"/></svg></span><span><strong>Solo tú y yo</strong><small>Una edición para ti</small></span></div>
+  <span class="status"><span class="dot" aria-hidden="true"></span><span id="seen">7 meses juntos</span></span>
+</header>
+<main class="grid">
+  <div class="intro">
+    <p class="eyebrow"><span aria-hidden="true">✦</span> Edición 07 · Para mi amor</p>
+    <h1>7 meses,<br> <em>7 razones.</em></h1>
+    <p class="lede">Un álbum de las pequeñas cosas que hacen que te siga eligiendo.</p>
+    <div class="stories-head"><span>Nuestras historias</span><span>07 para descubrir</span></div>
+    <nav class="stories" id="stories" aria-label="Las siete razones"></nav>
+  </div>
+  <article class="card" id="card">
+    <div class="cover-art" id="art">
+      <svg class="hero-art" id="flower" viewBox="0 0 550 345" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+        <defs>
+          <linearGradient id="leaf" x2="1" y2="1" gradientUnits="objectBoundingBox"><stop stop-color="#a3a17b"/><stop offset=".6" stop-color="#566748"/><stop offset="1" stop-color="#3e483f"/></linearGradient>
+          <linearGradient id="outer" x2="1" y2="1" gradientUnits="objectBoundingBox"><stop stop-color="#ffced0"/><stop offset=".54" stop-color="#d56b88"/><stop offset="1" stop-color="#8d305a"/></linearGradient>
+          <linearGradient id="inner" x1=".1" x2=".9" y2="1" gradientUnits="objectBoundingBox"><stop stop-color="#ffe5d7"/><stop offset=".48" stop-color="#efa1b1"/><stop offset="1" stop-color="#a33564"/></linearGradient>
+          <linearGradient id="front" x2="1" y2="1" gradientUnits="objectBoundingBox"><stop stop-color="#ffd6cc"/><stop offset=".42" stop-color="#e98aa5"/><stop offset=".85" stop-color="#af3d68"/><stop offset="1" stop-color="#6d2450"/></linearGradient>
+          <filter id="bloom-shadow" x="-35%" y="-30%" width="170%" height="175%"><feDropShadow dx="0" dy="12" stdDeviation="12" flood-color="#652849" flood-opacity=".26"/></filter>
+        </defs>
+        <circle cx="281" cy="156" r="125" fill="#fff" opacity=".14"/>
+        <circle cx="281" cy="156" r="126" fill="none" stroke="#fff" opacity=".48"/>
+        <ellipse cx="281" cy="156" rx="219" ry="78" transform="rotate(-25 281 156)" fill="none" stroke="#fff" opacity=".57"/>
+        <ellipse cx="281" cy="156" rx="195" ry="104" transform="rotate(24 281 156)" fill="none" stroke="#fff" stroke-dasharray="2 5" opacity=".48"/>
+        <g filter="url(#bloom-shadow)" transform="rotate(-13 281 170)">
+          <path d="M286 206c-5 43 5 92 15 141" fill="none" stroke="#52664c" stroke-width="8" stroke-linecap="round"/>
+          <path d="M293 311c-38-12-64-41-66-74 34 11 66 51 66 74Z" fill="url(#leaf)"/>
+          <path d="M294 302c20-46 51-64 77-66-15 34-46 62-77 66Z" fill="url(#leaf)"/>
+          <path d="M285 216c-55-4-82-50-70-114 38 5 65 34 80 65 5-42 25-70 58-80 13 73-20 133-68 129Z" fill="url(#outer)"/>
+          <path d="M286 216c-58-19-72-95-40-132 23 2 38 11 47 27 10-22 24-38 44-47 27 57 2 134-51 152Z" fill="url(#inner)"/>
+          <path d="M285 216c-46-8-75-43-78-97 40 13 70 23 84 47 13-31 43-53 64-58 6 62-28 109-70 108Z" fill="url(#front)" stroke="#ffe1d7" stroke-opacity=".65" stroke-width=".9"/>
+          <path d="M211 124c30 16 63 33 74 89m66-99c-32 19-55 54-61 96m-42-123c2 21 14 36 30 53m56-68c-6 29-22 54-35 62" fill="none" stroke="#ffe8de" stroke-opacity=".52" stroke-width="1.1"/>
+        </g>
+        <g fill="#fff9f3">
+          <path d="M107 162q2 13 13 15-11 2-13 15-2-13-13-15 11-2 13-15ZM428 72q2 11 11 13-9 2-11 13-2-11-11-13 9-2 11-13ZM444 211q2 7 7 8-5 1-7 8-2-7-7-8 5-1 7-8Z"/><circle cx="148" cy="104" r="2.5"/><circle cx="393" cy="238" r="2"/><circle cx="435" cy="113" r="2"/>
+        </g>
+      </svg>
+      <div class="symbol-art" id="symbol" hidden aria-hidden="true"><span class="spark sp1">✧</span><span class="spark sp2">✦</span><span class="spark sp3">✧</span><svg class="ico"><use id="large-icon" href="#i-heart"/></svg></div>
+      <img class="art-photo" id="photo" hidden alt="">
+      <div class="float-label"><span class="stamp" aria-hidden="true"><svg class="ico"><use href="#i-heart"/></svg></span><span id="tag">De mí, para ti</span></div>
+      <span class="art-index" id="art-index">VOL. 07</span>
+    </div>
+    <div class="card-body">
+      <p class="meta"><span aria-hidden="true">✦</span> <span id="meta">Feliz aniversario</span></p>
+      <h2 id="title" tabindex="-1">Tengo algo para ti.</h2>
+      <p class="message" id="message">Guardé siete razones en este rinconcito. Puedes abrirlas en orden o empezar por la que te llame la atención.</p>
+      <div class="controls">
+        <button type="button" class="previous" id="prev" aria-label="Volver" hidden><svg class="ico" aria-hidden="true"><use href="#i-left"/></svg></button>
+        <button type="button" class="pill" id="next"><span id="action">Abrir mi regalo</span><span class="circle" aria-hidden="true"><svg class="ico"><use id="action-icon" href="#i-right"/></svg></span></button>
+      </div>
+    </div>
+  </article>
+</main>
+<button type="button" class="edit-launch" id="edit-photos" data-editor>＋ Personalizar nuestras fotos</button>
+<dialog id="photo-editor" aria-labelledby="editor-title" data-editor>
+ <div class="editor-head"><h2 id="editor-title">Nuestras fotos</h2><button type="button" class="previous" id="close-editor" aria-label="Cerrar editor">✕</button></div>
+ <p class="editor-help">Elige una portada y hasta siete fotos. Se preparan aquí, en tu navegador. Ajusta el encuadre con el deslizador.</p>
+ <div class="photo-grid" id="photo-grid"></div>
+ <p id="photo-status" role="status" aria-live="polite">Descarga un borrador para guardar tus cambios antes de cerrar o recargar esta página.</p>
+ <div class="editor-actions"><button type="button" id="save-draft">Guardar borrador editable</button><button type="button" id="export-gift">Descargar regalo</button></div>
+ <p class="editor-help">El regalo incluye las fotos dentro de index.html y oculta este editor. Ese es el archivo que puedes subir a GitHub Pages.</p>
+</dialog>
+</div>
+<div class="dock-wrap"><nav class="dock" aria-label="Navegación del álbum">
+  <button type="button" data-go="inicio" aria-current="page"><svg class="ico" aria-hidden="true"><use href="#i-home"/></svg> Inicio</button>
+  <button type="button" data-go="razones"><svg class="ico" aria-hidden="true"><use href="#i-grid"/></svg> Razones</button>
+  <button type="button" data-go="carta"><svg class="ico" aria-hidden="true"><use href="#i-mail"/></svg> Carta</button>
+</nav></div>
+<script type="application/json" id="photo-data">{"cover":null,"reasons":[null,null,null,null,null,null,null]}</script>
+<script>
+const initialHTML="<!doctype html>\n"+document.documentElement.outerHTML;
+const photoData=JSON.parse(document.getElementById("photo-data").textContent);
+
+const reasons=[
+  ["Tu risa","Me gusta el segundo justo antes de que te rías, cuando ya sé que no te vas a aguantar. A veces me da más risa verte a ti que el chiste."],
+  ["Lo fácil que es ser yo contigo","Contigo puedo decir una bobada, cambiar de tema tres veces y volver al primero. Me gusta poder hablarte sin ensayar lo que voy a decir."],
+  ["Los días normales","Me gusta cuando el plan es cualquier cosa con tal de vernos. Hay días de los que ni me acuerdo qué hicimos, pero sí de lo contento que volví."],
+  ["Lo mucho que me gusta escucharte","Me gusta cuando me dices «te cuento rápido» y terminamos hablando de cinco cosas más. Si se nos hace tarde, casi nunca soy yo el que quiere colgar."],
+  ["Tu forma de cuidar","Me gusta que preguntes cómo estoy y te quedes a escuchar la respuesta de verdad. Quiero aprender a cuidarte con esa misma atención."],
+  ["Lo que todavía descubro de ti","Me gusta que después de siete meses todavía me sorprendas. A veces es una opinión que no esperaba; otras, una historia que no me habías contado."],
+  ["Las ganas de volver a verte","Hay algo que todavía me pasa: a veces apenas nos despedimos y ya estoy pensando en cuándo nos vemos otra vez."]
+];
+const letter=["Qué suerte la mía.","Amor, cuando pienso en estos siete meses, me quedo con lo bien que se siente compartir contigo hasta lo más sencillo. Gracias por dejarme conocerte de a poquito y por darme ganas de contarte siempre cómo me fue. Me hace ilusión todo lo que todavía nos queda por vivir. Felices siete meses. Te quiero. ♡"];
+const photos=photoData.reasons;
+const styles=[
+ ["smile","#ee9ab7","#ffe1cd","#f3acc6","#7d2850"],
+ ["cup","#c7b5ef","#f8dffe","#abaabf","#54386e"],
+ ["sun","#f6af8b","#fff0b8","#f0a4bc","#783b36"],
+ ["chat","#accbdc","#d8f2fa","#bea9ed","#384a68"],
+ ["heart","#ed9bb3","#ffe3dd","#e897b8","#882a4d"],
+ ["sparkle","#c2afee","#efe4ff","#d9a5d6","#583573"],
+ ["moon","#abaddf","#ebe4ff","#efb2d4","#424169"],
+ ["mail","#db9eb8","#ffe5df","#cdbeec","#702448"]
+];
+const $=id=>document.getElementById(id);
+const svgIcon=name=>'<svg class="ico" aria-hidden="true"><use href="#i-'+name+'"/></svg>';
+const stories=$("stories"), art=$("art"), card=$("card"), photo=$("photo"), pageButtons=document.querySelectorAll("[data-go]");
+const title=$("title"), seen=new Set();
+let page=-1, lastReason=0;
+function paint(element, palette){
+ const [,tone,light,deep,dark]=palette;
+ [["tone",tone],["light",light],["deep",deep],["dark",dark]].forEach(([key,val])=>{
+   if(val)element.style.setProperty("--"+key,val);else element.style.removeProperty("--"+key);
+ });
+}
+const buttons=reasons.map(([reason],i)=>{
+ const button=document.createElement("button");
+ button.type="button";button.className="story";
+ button.setAttribute("aria-label",`Razón ${i+1}: ${reason}`);
+ button.innerHTML=svgIcon(styles[i][0])+`<small>${String(i+1).padStart(2,"0")}</small>`;
+ paint(button,styles[i]);
+ button.addEventListener("click",()=>render(i));
+ stories.append(button);return button;
+});
+photo.addEventListener("error",()=>{photo.hidden=true;$("symbol").hidden=page<0;});
+function render(value, focus=true){
+ page=value;
+ const home=page===-1, end=page===reasons.length, reason=!home&&!end;
+ const view=home?"inicio":end?"carta":"razones";
+ document.body.dataset.page=view;
+ if(reason){lastReason=page;seen.add(page);}
+ $("seen").textContent=seen.size?`${seen.size} de ${reasons.length} leídas`:"7 meses juntos";
+ buttons.forEach((b,i)=>{
+  if(page===i)b.setAttribute("aria-current","true");else b.removeAttribute("aria-current");
+ });
+ if(reason){
+   const selected=buttons[page];
+   const offset=selected.offsetLeft-stories.offsetLeft-stories.scrollLeft;
+   if(offset<0||offset+selected.offsetWidth>stories.clientWidth)
+     stories.scrollLeft=selected.offsetLeft-stories.offsetLeft-(stories.clientWidth-selected.offsetWidth)/2;
+ }
+ pageButtons.forEach(b=>{if(b.dataset.go===view)b.setAttribute("aria-current","page");else b.removeAttribute("aria-current");});
+ paint(art,home?[]:styles[page]);
+ $("flower").toggleAttribute("hidden",!home);
+ $("symbol").hidden=home;
+ const currentPhoto=home?photoData.cover:end?null:photos[page];
+ photo.hidden=!currentPhoto;
+ if(photo.hidden){photo.removeAttribute("src");photo.alt="";}
+ else{photo.alt=currentPhoto.alt;photo.src=currentPhoto.src;photo.style.objectPosition="50% "+(currentPhoto.position??50)+"%";}
+ $("large-icon").setAttribute("href","#i-"+(home?"heart":styles[page][0]));
+ $("tag").textContent=home?"De mí, para ti":end?"Con todo mi cariño":"Solo tú y yo";
+ $("art-index").textContent=home?"VOL. 07":end?"P. D. ♡":`0${page+1} / 07`;
+ $("meta").textContent=home?"Felices siete meses":end?"Una carta para ti":`Razón ${page+1} de ${reasons.length}`;
+ title.textContent=home?"Tengo algo para ti.":end?letter[0]:reasons[page][0];
+ $("message").textContent=home?"Guardé siete razones en este rinconcito. Puedes abrirlas en orden o empezar por la que te llame la atención.":end?letter[1]:reasons[page][1];
+ $("prev").hidden=home;
+ $("action").textContent=home?"Abrir mi regalo":end?"Volver al inicio":page===reasons.length-1?"Abrir la carta":"Siguiente razón";
+ $("action-icon").setAttribute("href",end?"#i-home":page===reasons.length-1?"#i-mail":"#i-right");
+ card.classList.remove("fade");void card.offsetWidth;card.classList.add("fade");
+ if(!focus)return;
+ title.focus({preventScroll:true});
+ const rect=card.getBoundingClientRect();
+ if(rect.top<0||title.getBoundingClientRect().bottom>window.innerHeight-76)card.scrollIntoView({block:"start"});
+}
+$("next").addEventListener("click",()=>render(page===reasons.length?-1:page+1));
+$("prev").addEventListener("click",()=>render(page-1));
+pageButtons.forEach(button=>button.addEventListener("click",()=>render(button.dataset.go==="inicio"?-1:button.dataset.go==="carta"?reasons.length:lastReason)));
+
+function refreshThumbnails(){
+ buttons.forEach((button,i)=>{
+   button.querySelector("img")?.remove();
+   button.classList.toggle("has-photo",!!photos[i]);
+   if(photos[i]){
+     const img=document.createElement("img");img.src=photos[i].src;img.alt="";
+     img.style.objectPosition="50% "+(photos[i].position??50)+"%";
+     button.prepend(img);
+   }
+ });
+}
+refreshThumbnails();
+render(-1,false);
+const editor=$("photo-editor");
+if(editor){
+ const slots=[{label:"Portada",key:-1},...reasons.map(([label],key)=>({label:(key+1)+". "+label,key}))];
+ let pending=0;
+ const setBusy=()=>{ $("save-draft").disabled=pending>0;$("export-gift").disabled=pending>0; };
+ const getPhoto=key=>key===-1?photoData.cover:photos[key];
+ const putPhoto=(key,value)=>{if(key===-1)photoData.cover=value;else photos[key]=value;refreshThumbnails();render(page,false);};
+ $("edit-photos").addEventListener("click",()=>editor.showModal());
+ $("close-editor").addEventListener("click",()=>editor.close());
+ for(const {label,key} of slots){
+   const slot=document.createElement("div");slot.className="photo-slot";
+   const heading=document.createElement("strong");heading.textContent=label;
+   const preview=document.createElement("div");preview.className="photo-preview";preview.style.backgroundSize="cover";preview.setAttribute("role","img");preview.setAttribute("aria-label","Vista previa: "+label);
+   const fileLabel=document.createElement("label");fileLabel.textContent="Elegir o cambiar foto";
+   const input=document.createElement("input");input.type="file";input.accept="image/jpeg,image/png,image/webp";
+   fileLabel.append(input);
+   const positionLabel=document.createElement("label");positionLabel.textContent="Encuadre vertical";
+   const range=document.createElement("input");range.type="range";range.min=0;range.max=100;range.value=getPhoto(key)?.position??50;positionLabel.append(range);
+   const altLabel=document.createElement("label");altLabel.textContent="Descripción de la foto";
+   const alt=document.createElement("input");alt.type="text";alt.maxLength=180;alt.placeholder="Por ejemplo: los dos en el parque";alt.value=getPhoto(key)?.alt??"";altLabel.append(alt);
+   const remove=document.createElement("button");remove.type="button";remove.className="remove-photo";remove.textContent="Quitar foto";
+   function refresh(){
+     const item=getPhoto(key);
+     preview.style.backgroundImage=item?'url("'+item.src+'")':"";
+     preview.style.backgroundPosition="50% "+(item?.position??50)+"%";
+     range.disabled=alt.disabled=remove.disabled=!item;
+   }
+   range.addEventListener("input",()=>{const item=getPhoto(key);if(item){item.position=Number(range.value);putPhoto(key,item);refresh();}});
+   alt.addEventListener("input",()=>{const item=getPhoto(key);if(item){item.alt=alt.value;putPhoto(key,item);}});
+   remove.addEventListener("click",()=>{putPhoto(key,null);input.value="";alt.value="";range.value=50;refresh();});
+   input.addEventListener("change",async()=>{
+     const file=input.files[0];if(!file)return;
+     if(file.size>30*1024*1024){$("photo-status").textContent="Esta foto supera 30 MB. Elige una versión más pequeña.";input.value="";return;}
+     pending++;setBusy();input.disabled=true;
+     $("photo-status").textContent="Preparando "+label+"…";
+     try{
+       const src=await preparePhoto(file);
+       putPhoto(key,{src,alt:alt.value||"Una foto de nosotros",position:50});
+       range.value=50;alt.value=getPhoto(key).alt;refresh();
+       $("photo-status").textContent="Foto lista. Descarga un borrador o el regalo para guardar tus cambios.";
+     }catch(error){
+       $("photo-status").textContent="No se pudo abrir esa foto. Prueba con un archivo JPG, PNG o WebP.";
+     }finally{pending--;setBusy();input.disabled=false;input.value="";}
+   });
+   slot.append(heading,preview,fileLabel,positionLabel,altLabel,remove);$("photo-grid").append(slot);refresh();
+ }
+ $("save-draft").addEventListener("click",()=>downloadPage(false));
+ $("export-gift").addEventListener("click",()=>downloadPage(true));
+ function downloadPage(gift){
+   if(pending)return;
+   const doc=new DOMParser().parseFromString(initialHTML,"text/html");
+   doc.getElementById("photo-data").textContent=JSON.stringify(photoData).replace(/</g,"\\u003c");
+   if(gift)doc.querySelectorAll("[data-editor]").forEach(el=>el.remove());
+   const blob=new Blob(["<!doctype html>\n"+doc.documentElement.outerHTML],{type:"text/html;charset=utf-8"});
+   const url=URL.createObjectURL(blob),link=document.createElement("a");
+   link.href=url;link.download=gift?"index.html":"nuestro-album-borrador.html";
+   document.body.append(link);link.click();link.remove();
+   setTimeout(()=>URL.revokeObjectURL(url),30000);
+   $("photo-status").textContent=gift?"Regalo descargado con las fotos incluidas.":"Borrador descargado. Ábrelo para seguir editando tus fotos.";
+ }
+}
+async function preparePhoto(file){
+ const url=URL.createObjectURL(file);
+ try{
+   const img=new Image();
+   await new Promise((resolve,reject)=>{img.onload=resolve;img.onerror=reject;img.src=url;});
+   const scale=Math.min(1,1600/Math.max(img.naturalWidth,img.naturalHeight));
+   const canvas=document.createElement("canvas");
+   canvas.width=Math.max(1,Math.round(img.naturalWidth*scale));canvas.height=Math.max(1,Math.round(img.naturalHeight*scale));
+   const context=canvas.getContext("2d");context.fillStyle="#fff5f8";context.fillRect(0,0,canvas.width,canvas.height);
+   context.drawImage(img,0,0,canvas.width,canvas.height);
+   return canvas.toDataURL("image/jpeg",.86);
+ }finally{URL.revokeObjectURL(url);}
+}
+</script>
+</body>
+</html>
