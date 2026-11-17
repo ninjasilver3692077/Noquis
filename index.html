@@ -46,6 +46,11 @@ h1 em{font-weight:540;color:#6d2448;white-space:nowrap}
 .stamp{width:26px;height:26px;background:#fff9}.stamp .ico{width:15px;height:15px}
 .art-index{bottom:11px;right:11px;padding:7px 11px;font-size:.63rem;letter-spacing:.12em;font-weight:820}
 .art-photo{width:100%;height:100%;object-fit:cover;position:absolute;inset:0}
+/* Give photos their own space and preserve the complete original frame. */
+.cover-art.has-photo{min-height:0;aspect-ratio:auto;padding:48px 0 36px}
+.cover-art.has-photo::before{display:none}
+.cover-art.has-photo .art-photo{display:block;position:relative;inset:auto;height:auto;max-height:min(65svh,600px);object-fit:contain}
+.cover-art.has-photo .hero-art{display:none}
 .symbol-art{position:absolute;inset:0;display:grid;place-items:center}
 .symbol-art:before,.symbol-art:after{content:"";position:absolute;width:45%;aspect-ratio:1;border:1px solid #fff9;border-radius:50%;transform:rotate(-28deg) scaleY(.54)}
 .symbol-art:after{transform:rotate(32deg) scaleY(.75);width:57%;border-style:dashed}
@@ -70,7 +75,7 @@ h2{font-size:clamp(1.65rem,3.3vw,2.45rem);line-height:1;letter-spacing:-.062em}
 .dock button:hover:not([aria-current=page]){background:#514153}
 .dock .ico{width:18px;height:18px}
 .fade{animation:slide .28s ease-out both}
-@keyframes slide{from{opacity:.3;transform:translateY(5px)}to{opacity:1;transform:none}}
+@keyframes slide{from{transform:translateY(5px)}to{transform:none}}
 @media(max-width:730px){
  .shell{width:min(480px,calc(100% - 30px));padding-top:15px;padding-bottom:99px}
  header{margin-bottom:19px}
@@ -92,7 +97,7 @@ h2{font-size:clamp(1.65rem,3.3vw,2.45rem);line-height:1;letter-spacing:-.062em}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
 
 .story{overflow:hidden}
-.story img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.story img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain}
 .story.has-photo small{z-index:1;background:#241421b8;color:white;border-radius:12px;padding:2px 6px}
 .edit-launch{display:block;margin:21px auto 0;border:1px solid #fff9;background:#fff7;border-radius:100px;padding:10px 17px;font-size:.78rem}
 dialog{width:min(660px,calc(100% - 24px));max-height:86svh;padding:22px;border:1px solid white;border-radius:27px;background:#fff5f8;color:var(--ink);box-shadow:0 20px 100px #30102860}
@@ -189,7 +194,7 @@ dialog::backdrop{background:#28132678;backdrop-filter:blur(8px)}
     </div>
   </article>
 </main>
-<button type="button" class="edit-launch" id="edit-photos" data-editor>＋ Personalizar nuestras fotos</button>
+<button type="button" class="edit-launch" id="edit-photos" data-editor hidden>＋ Personalizar nuestras fotos</button>
 <dialog id="photo-editor" aria-labelledby="editor-title" data-editor>
  <div class="editor-head"><h2 id="editor-title">Nuestras fotos</h2><button type="button" class="previous" id="close-editor" aria-label="Cerrar editor">✕</button></div>
  <p class="editor-help">Elige una portada y hasta siete fotos. Se preparan aquí, en tu navegador. Ajusta el encuadre con el deslizador.</p>
@@ -250,7 +255,7 @@ const buttons=reasons.map(([reason],i)=>{
  button.addEventListener("click",()=>render(i));
  stories.append(button);return button;
 });
-photo.addEventListener("error",()=>{photo.hidden=true;$("symbol").hidden=page<0;});
+photo.addEventListener("error",()=>{photo.hidden=true;art.classList.remove("has-photo");$("symbol").hidden=page<0;});
 function render(value, focus=true){
  page=value;
  const home=page===-1, end=page===reasons.length, reason=!home&&!end;
@@ -273,6 +278,7 @@ function render(value, focus=true){
  const currentPhoto=home?photoData.cover:end?null:photos[page];
  $("symbol").hidden=home||!!currentPhoto;
  photo.hidden=!currentPhoto;
+ art.classList.toggle("has-photo",!!currentPhoto);
  if(photo.hidden){photo.removeAttribute("src");photo.alt="";}
  else{photo.alt=currentPhoto.alt;photo.src=currentPhoto.src;photo.style.objectPosition="50% "+(currentPhoto.position??50)+"%";}
  $("large-icon").setAttribute("href","#i-"+(home?"heart":styles[page][0]));
