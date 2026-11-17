@@ -3,102 +3,116 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#f4cfda">
+<meta name="theme-color" content="#201175">
 <title>7 meses, 7 razones para elegirte</title>
 <style>
-:root{--ink:#241421;--sub:#624854;--white:#fff9f7;--accent:#831c4b;--glass:#fff8fa95;--edge:#fffc;--round:29px}
+:root{--ink:#14131b;--sub:#777383;--white:#fff;--accent:#084bff;--pink:#f8d2ef;--line:#efedf4;--round:28px}
 *{box-sizing:border-box}
 [hidden]{display:none!important}
-body{margin:0;min-height:100svh;color:var(--ink);font-family:system-ui,-apple-system,sans-serif;background:radial-gradient(ellipse at 22% 32%,#e999af 0%,transparent 55%),radial-gradient(ellipse at 93% 75%,#cab8ff 0%,transparent 58%),linear-gradient(148deg,#f9e5ed 0%,#f1c6d3 56%,#fbf6fe 100%);background-attachment:fixed}
-button{font:inherit;color:inherit;cursor:pointer}
-button:focus-visible,[tabindex]:focus-visible{outline:3px solid #852451;outline-offset:4px}
-svg.ico{width:23px;height:23px;vertical-align:middle;fill:none;stroke:currentColor;stroke-width:1.65;stroke-linecap:round;stroke-linejoin:round}
-.shell{width:min(1060px,calc(100% - 56px));margin:auto;padding:24px 0 118px}
-header{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:clamp(24px,4.9vh,52px)}
-.brand,.status{display:flex;align-items:center;gap:10px;min-height:49px;padding:5px 15px 5px 6px;background:var(--glass);border:1px solid var(--edge);border-radius:100px}
-.brand strong{display:block;font-size:.86rem;line-height:1.12}.brand small{font-size:.68rem;color:var(--sub)}
-.avatar,.stamp{display:grid;place-items:center;flex:none;border-radius:50%;width:37px;height:37px;background:linear-gradient(142deg,#e781aa,#f4bad1 53%,#d7c4f8);color:#521636;border:1px solid #fffa}
-.avatar .ico{width:19px;height:19px}
-.status{gap:8px;padding-inline:14px;font-size:.71rem;font-weight:750;white-space:nowrap}
-.dot{width:7px;height:7px;border-radius:50%;background:#9b3964;box-shadow:0 0 0 4px #9b396416}
-.grid{display:grid;grid-template-columns:minmax(0,.87fr) minmax(0,1.13fr);gap:clamp(24px,5vw,70px);align-items:center}
-.intro{min-width:0}
-.eyebrow{display:inline-flex;gap:7px;align-items:center;border:1px solid #fff9;background:#fff4;padding:7px 12px;border-radius:100px;font-size:.63rem;letter-spacing:.17em;font-weight:800;text-transform:uppercase}
+html{scroll-padding-top:24px}
+body{margin:0;min-height:100svh;color:var(--ink);font-family:ui-rounded,"SF Pro Display",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:radial-gradient(ellipse at 10% 95%,#7b16ed 0,transparent 60%),radial-gradient(ellipse at 100% 35%,#4833bd 0,transparent 65%),linear-gradient(155deg,#0c2062,#24117e 65%,#6b12d8);background-attachment:fixed;padding:40px 0 124px}
+button{font:inherit;color:inherit;cursor:pointer;-webkit-tap-highlight-color:transparent}
+button:focus-visible,[tabindex]:focus-visible{outline:3px solid var(--accent);outline-offset:4px}
+#title:focus:not(:focus-visible){outline:none}
+svg.ico{width:23px;height:23px;vertical-align:middle;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.shell{width:min(1100px,calc(100% - 80px));margin:auto;padding:26px 34px 34px;background:white;border:1px solid #fff9;border-radius:36px;box-shadow:0 0 0 8px #ffffff18,0 30px 100px #0a073b40}
+header{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-bottom:22px;border-bottom:1px solid var(--line);margin-bottom:28px}
+.brand,.status{display:flex;align-items:center;gap:10px}
+.brand strong{display:block;font-size:.86rem;line-height:1.3;letter-spacing:-.035em}.brand small{font-size:.68rem;color:var(--sub)}
+.avatar,.stamp{display:grid;place-items:center;flex:none;border-radius:50%;width:38px;height:38px;background:#fbe3f4;color:#ce4eac}
+.avatar .ico{width:19px;height:19px;fill:#ed84d0;stroke:#d15ab0}
+.status{gap:7px;padding:9px 12px;background:#f1edff;border-radius:100px;color:#655199;font-size:.68rem;font-weight:650;white-space:nowrap}
+.dot{width:6px;height:6px;border-radius:50%;background:#a65cdf}
+.grid{display:grid;grid-template-columns:minmax(0,.78fr) minmax(0,1.22fr);gap:42px;align-items:start}
+.intro{min-width:0;text-align:center;padding:16px 0 10px;position:sticky;top:24px}
+.profile-portrait{position:relative;display:grid;place-items:center;width:100px;height:100px;margin:0 auto 17px;border:5px solid white;outline:2px solid #f0d9f5;border-radius:50%;background:#fae6f6;box-shadow:0 8px 24px #8064aa17;overflow:hidden}
+.profile-portrait img{width:100%;height:100%;object-fit:cover;object-position:50% 59%}
+.profile-portrait>.ico{width:35px;height:35px;color:#ba61cb}
+.profile-name{font-size:1.05rem;font-weight:750;letter-spacing:-.04em;margin-bottom:12px}
+.eyebrow{display:inline-flex;gap:6px;align-items:center;padding:6px 11px;border-radius:100px;background:#fbe9f8;color:#9950b9;font-size:.63rem;letter-spacing:.03em;font-weight:600}
 h1,h2,p{margin:0}
-h1{font-size:clamp(3.4rem,7.3vw,6.45rem);line-height:.91;letter-spacing:-.092em;margin:15px 0}
-h1 em{font-weight:540;color:#6d2448;white-space:nowrap}
-.lede{font-size:.96rem;line-height:1.52;max-width:33ch;color:var(--sub)}
-.stories-head{display:flex;align-items:center;justify-content:space-between;gap:8px;margin:26px 0 9px;font-size:.78rem;font-weight:800}
-.stories-head span:last-child{font-size:.65rem;font-weight:600;color:var(--sub)}
-.stories{display:grid;grid-template-columns:repeat(7,minmax(48px,1fr));gap:6px;padding:4px 3px 7px;margin:0 -3px;overflow-x:auto;scrollbar-width:none}
+h1{font-size:clamp(2.5rem,4.4vw,3.35rem);line-height:1.04;letter-spacing:-.07em;margin:18px 0 12px;font-weight:780}
+h1 em{font-style:normal;font-weight:inherit;white-space:nowrap}
+.lede{font-size:.84rem;line-height:1.65;max-width:31ch;margin:0 auto;color:var(--sub)}
+.profile-stats{display:grid;grid-template-columns:repeat(3,1fr);margin:26px 0 22px;padding:0}
+.profile-stats>div+div{border-left:1px solid var(--line)}
+.profile-stats dt{font-size:1.1rem;font-weight:750;letter-spacing:-.05em}.profile-stats dd{font-size:.69rem;margin:5px 0 0;color:var(--sub)}
+.stories-head{display:flex;align-items:center;justify-content:space-between;gap:8px;border-top:1px solid var(--line);padding-top:18px;margin:0 0 12px;font-size:.76rem;font-weight:700;text-align:left}
+.stories-head span:last-child{font-size:.62rem;font-weight:500;color:var(--sub)}
+.stories{display:grid;grid-template-columns:repeat(7,minmax(40px,1fr));gap:6px;padding:4px 3px 8px;margin:0 -3px;overflow-x:auto;scrollbar-width:none}
 .stories::-webkit-scrollbar{display:none}
-.story{position:relative;min-height:67px;aspect-ratio:.75;border:1px solid #fff9;border-radius:16px;background:radial-gradient(at 22% 13%,var(--light),transparent 65%),var(--tone);color:var(--dark);display:grid;place-items:center;padding:10px 4px 18px;transition:transform .2s,box-shadow .2s}
-.story:hover{transform:translateY(-2px)}
-.story[aria-current=true]{box-shadow:0 0 0 2px var(--ink);border-color:white}
-.story .ico{width:clamp(17px,2.5vw,26px);height:clamp(17px,2.5vw,26px)}
-.story small{position:absolute;bottom:5px;font-size:.59rem;font-weight:850;letter-spacing:.07em}
-.card{min-width:0;background:#fff9f7ec;padding:9px;border:1px solid #ffffffe0;border-radius:var(--round);box-shadow:0 20px 55px #6c375725,0 1px 2px #8d4a571b}
-.cover-art{min-height:245px;aspect-ratio:1.55;border-radius:22px;isolation:isolate;overflow:hidden;position:relative;background:radial-gradient(ellipse at 63% 40%,var(--light,#ffd3cc),transparent 65%),linear-gradient(135deg,var(--tone,#ed98b3),var(--deep,#cbb9f4));color:var(--dark,#6d2448)}
-.cover-art::before{content:"";position:absolute;inset:0;pointer-events:none;z-index:2;opacity:.18;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 170 170' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.73' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Cpath d='M0 0h170v170H0z' filter='url(%23g)' opacity='.64'/%3E%3C/svg%3E")}
+.story{position:relative;min-height:64px;aspect-ratio:.68;border:0;border-radius:13px;overflow:hidden;background:var(--light,#f5edf8);color:var(--dark);display:grid;place-items:center;padding:8px 3px 20px;transition:transform .2s,box-shadow .2s}
+.story:hover{transform:translateY(-3px)}
+.story[aria-current=true]{box-shadow:0 0 0 2px white,0 0 0 4px var(--accent)}
+.story .ico{width:21px;height:21px}
+.story.has-photo>.ico{display:none}
+.story img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain}
+.story small{position:absolute;z-index:1;bottom:4px;font-size:.57rem;font-weight:750;letter-spacing:.03em}
+.story.has-photo small{background:#fff;color:#151420;border-radius:12px;padding:2px 6px;box-shadow:0 2px 8px #19133312}
+.card{min-width:0;background:white;border:1px solid var(--line);border-radius:var(--round);overflow:hidden;box-shadow:0 8px 28px #24203c05;scroll-margin-top:20px}
+.cover-art{min-height:245px;aspect-ratio:1.55;isolation:isolate;overflow:hidden;position:relative;background:radial-gradient(ellipse at 63% 40%,var(--light,#ffd3ed),transparent 65%),linear-gradient(135deg,var(--tone,#ecc7ef),var(--deep,#cec6f6));color:var(--dark,#7d45a6)}
 .hero-art{position:absolute;width:100%;height:100%;inset:0}
-.float-label,.art-index{position:absolute;z-index:3;display:flex;align-items:center;gap:8px;padding:5px 10px 5px 6px;border-radius:100px;border:1px solid #fff9;background:#fff9;backdrop-filter:blur(16px);color:#44233a}
-.float-label{top:11px;left:11px;font-weight:750;font-size:.69rem}
-.stamp{width:26px;height:26px;background:#fff9}.stamp .ico{width:15px;height:15px}
-.art-index{bottom:11px;right:11px;padding:7px 11px;font-size:.63rem;letter-spacing:.12em;font-weight:820}
-.art-photo{width:100%;height:100%;object-fit:cover;position:absolute;inset:0}
-/* Give photos their own space and preserve the complete original frame. */
-.cover-art.has-photo{min-height:0;aspect-ratio:auto;padding:48px 0 36px}
-.cover-art.has-photo::before{display:none}
-.cover-art.has-photo .art-photo{display:block;position:relative;inset:auto;height:auto;max-height:min(65svh,600px);object-fit:contain}
+.float-label,.art-index{position:absolute;z-index:3;display:flex;align-items:center;gap:9px;border-radius:100px;color:var(--ink)}
+.float-label{top:13px;left:17px;font-weight:700;font-size:.74rem}
+.stamp{width:30px;height:30px;background:#fbe0f5;color:#d86cc2}.stamp .ico{width:15px;height:15px;fill:#f3aadf}
+.art-index{bottom:9px;right:17px;font-size:.6rem;letter-spacing:.08em;font-weight:600;color:#8c789b}
+.art-photo{width:100%;height:100%;object-fit:contain;position:absolute;inset:0}
+.cover-art.has-photo{min-height:0;aspect-ratio:auto;padding:56px 0 30px;background:#faf8fc}
+.cover-art.has-photo .float-label{top:0;left:0;right:0;height:56px;padding:0 18px;border-radius:0;background:white}
+.cover-art.has-photo .art-photo{display:block;position:relative;inset:auto;height:auto;max-height:min(59svh,510px);object-fit:contain}
 .cover-art.has-photo .hero-art{display:none}
 .symbol-art{position:absolute;inset:0;display:grid;place-items:center}
 .symbol-art:before,.symbol-art:after{content:"";position:absolute;width:45%;aspect-ratio:1;border:1px solid #fff9;border-radius:50%;transform:rotate(-28deg) scaleY(.54)}
 .symbol-art:after{transform:rotate(32deg) scaleY(.75);width:57%;border-style:dashed}
-.symbol-art .ico{position:relative;z-index:1;width:26%;height:auto;aspect-ratio:1;fill:#fff4;stroke-width:1.06;filter:drop-shadow(0 12px 15px #5b25433e);transform:rotate(-11deg)}
-.spark{color:#fffdf8;position:absolute;font:1.5rem Georgia,serif;z-index:1}
-.sp1{left:19%;top:56%}.sp2{right:21%;top:27%;font-size:2rem}.sp3{right:27%;bottom:18%;font-size:1rem}
-.card-body{padding:15px 12px 9px}
-.meta{display:flex;align-items:center;gap:7px;color:var(--accent);font-size:.64rem;letter-spacing:.14em;text-transform:uppercase;font-weight:850;margin-bottom:6px}
-h2{font-size:clamp(1.65rem,3.3vw,2.45rem);line-height:1;letter-spacing:-.062em}
-.message{margin-top:9px;font-size:.91rem;line-height:1.56;color:#47323e;max-width:58ch}
-.controls{display:flex;gap:7px;margin-top:14px}
-.pill{display:flex;align-items:center;justify-content:space-between;gap:10px;min-height:46px;border:0;border-radius:100px;padding:5px 5px 5px 14px;background:#231522;color:#fff9fc;font-size:.84rem;font-weight:720;flex:1;text-align:left}
-.pill:hover{background:#49203b}
-.pill .circle{display:grid;place-items:center;width:36px;height:36px;background:#fff9fc;color:#261824;border-radius:50%;flex:none}
+.symbol-art .ico{position:relative;z-index:1;width:24%;height:auto;aspect-ratio:1;fill:#fff5;stroke-width:1.1;transform:rotate(-11deg)}
+.spark{color:white;position:absolute;font:1.5rem Georgia,serif;z-index:1}.sp1{left:19%;top:56%}.sp2{right:21%;top:27%;font-size:2rem}.sp3{right:27%;bottom:18%;font-size:1rem}
+.card-body{padding:22px 24px 24px}
+.meta{display:flex;align-items:center;gap:6px;width:fit-content;background:#fbe5f6;color:#954d89;padding:6px 10px;border-radius:100px;font-size:.61rem;letter-spacing:.035em;font-weight:650;margin-bottom:13px}
+h2{font-size:clamp(1.5rem,2.8vw,2rem);line-height:1.13;letter-spacing:-.055em}
+.message{margin-top:12px;font-size:.9rem;line-height:1.75;color:#686471;max-width:58ch}
+.controls{display:flex;gap:9px;margin-top:22px}
+.pill{display:flex;align-items:center;justify-content:space-between;gap:10px;min-height:49px;border:0;border-radius:100px;padding:6px 6px 6px 20px;background:var(--accent);color:white;font-size:.81rem;font-weight:650;flex:1;text-align:left;transition:background .2s,transform .2s}
+.pill:hover{background:#003bda;transform:translateY(-1px)}
+.pill .circle{display:grid;place-items:center;width:36px;height:36px;background:#ffffff24;color:white;border-radius:50%;flex:none}
 .pill .ico,.previous .ico{width:18px;height:18px}
-.previous{width:46px;min-height:46px;flex:none;background:#f8e8ef;border:1px solid #e9d3df;border-radius:50%}
-.previous:hover{background:#f0d7e4}
-.dock-wrap{position:fixed;z-index:5;bottom:0;left:0;right:0;display:flex;justify-content:center;padding:12px 12px max(11px,env(safe-area-inset-bottom));background:linear-gradient(transparent,#faf1faec 84%);pointer-events:none}
-.dock{pointer-events:auto;display:flex;align-items:center;gap:5px;background:#20141f;color:white;padding:5px;border-radius:100px;box-shadow:0 14px 32px #57204031}
-.dock button{display:flex;align-items:center;justify-content:center;gap:7px;padding:0 14px;min-height:44px;border:0;border-radius:100px;background:#3d303d;color:#ffeff8;font-size:.76rem;font-weight:650;white-space:nowrap}
-.dock button[aria-current=page]{background:#fff9fb;color:#221421}
-.dock button:hover:not([aria-current=page]){background:#514153}
-.dock .ico{width:18px;height:18px}
-.fade{animation:slide .28s ease-out both}
-@keyframes slide{from{transform:translateY(5px)}to{transform:none}}
+.previous{width:49px;min-height:49px;flex:none;background:#f6f4fa;border:1px solid var(--line);border-radius:50%;color:#6a657b}.previous:hover{background:#eee8f7}
+.dock-wrap{position:fixed;z-index:5;bottom:0;left:0;right:0;display:flex;justify-content:center;padding:16px 14px max(20px,env(safe-area-inset-bottom));pointer-events:none}
+.dock{pointer-events:auto;display:flex;align-items:center;gap:5px;padding:8px;background:#fffffff5;backdrop-filter:blur(20px);border:1px solid white;border-radius:25px;box-shadow:0 10px 45px #10074930,0 0 0 5px #ffffff1c}
+.dock button{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;padding:8px 25px;min-width:90px;min-height:58px;border:0;border-radius:18px;background:transparent;color:#858090;font-size:.65rem;font-weight:600;white-space:nowrap;transition:background .2s,color .2s}
+.dock button[aria-current=page]{background:#eef2ff;color:var(--accent)}
+.dock button[aria-current=page] .ico{stroke-width:2.2}
+.dock button:hover:not([aria-current=page]){background:#faf3fb;color:#9862b3}
+.dock .ico{width:22px;height:22px}
+.fade{animation:slide .25s ease-out both}@keyframes slide{from{transform:translateY(5px)}to{transform:none}}
 @media(max-width:730px){
- .shell{width:min(480px,calc(100% - 30px));padding-top:15px;padding-bottom:99px}
- header{margin-bottom:19px}
- .grid{grid-template-columns:1fr;gap:10px}
- h1{font-size:clamp(2.95rem,13.2vw,4.75rem);margin:10px 0}
- .lede{font-size:.82rem}
- .eyebrow{font-size:.57rem;padding:5px 9px}
- .stories-head{margin-top:13px;margin-bottom:6px}
- .story{min-height:57px;aspect-ratio:.96;border-radius:13px}
- .story .ico{width:21px;height:21px}
- .cover-art{min-height:0;aspect-ratio:1.65}
- .card-body{padding:11px 8px 5px}
- .message{font-size:.86rem}
- body[data-page]:not([data-page=inicio]) h1{font-size:clamp(1.95rem,7vw,2.85rem)}
- body[data-page]:not([data-page=inicio]) h1 br{display:none}
- body[data-page]:not([data-page=inicio]) .lede{display:none}
+ body{padding:18px 0 115px}
+ .shell{width:min(480px,calc(100% - 28px));padding:18px 16px 22px;border-radius:30px;box-shadow:0 0 0 5px #ffffff18,0 20px 60px #0a073b30}
+ header{padding-bottom:15px;margin-bottom:8px;gap:8px}
+ .brand{gap:7px}.brand strong{font-size:.74rem}.brand small{font-size:.59rem}.avatar{width:31px;height:31px}
+ .status{font-size:.6rem;padding:8px 9px;gap:5px}
+ .grid{grid-template-columns:1fr;gap:17px}
+ .intro{position:static;padding-top:14px}
+ .profile-portrait{width:78px;height:78px;margin-bottom:12px;border-width:4px}
+ .profile-name{font-size:.95rem;margin-bottom:8px}
+ h1{font-size:2.25rem;margin:13px 0 9px;line-height:1.06}h1 br{display:none}
+ .eyebrow{font-size:.59rem;padding:5px 9px}
+ .lede{font-size:.76rem;max-width:32ch}
+ .profile-stats{margin:20px 0 18px}.profile-stats dt{font-size:1rem}.profile-stats dd{font-size:.65rem}
+ .stories-head{padding-top:14px;margin-bottom:10px;font-size:.72rem}
+ .story{aspect-ratio:.72;min-height:58px;border-radius:11px}
+ .stories{gap:5px;grid-template-columns:repeat(7,minmax(35px,1fr))}
+ .card{border-radius:22px}
+ .cover-art.has-photo .art-photo{max-height:58svh}
+ .card-body{padding:18px 17px 19px}.message{font-size:.85rem;line-height:1.7}
+ h2{font-size:1.55rem}.controls{margin-top:18px}
+ .dock-wrap{padding-bottom:max(14px,env(safe-area-inset-bottom))}.dock{padding:6px;border-radius:23px}.dock button{padding:7px 22px;min-height:53px;min-width:84px;border-radius:17px}
+ body[data-page]:not([data-page=inicio]) .profile-portrait,body[data-page]:not([data-page=inicio]) .profile-name,body[data-page]:not([data-page=inicio]) .profile-stats,body[data-page]:not([data-page=inicio]) .lede{display:none}
+ body[data-page]:not([data-page=inicio]) h1{font-size:1.65rem;margin:12px 0 15px}
+ body[data-page]:not([data-page=inicio]) .intro{padding-top:10px;padding-bottom:0}
 }
-@media(max-width:355px){.dock button{padding-inline:10px}.status{padding-inline:10px}.stories{gap:5px}}
+@media(max-width:355px){.brand small{display:none}.status{font-size:.57rem;padding:8px}.shell{padding-inline:12px}.dock button{min-width:76px;padding-inline:17px}h1{font-size:1.95rem}.story small{font-size:.52rem}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
 
-.story{overflow:hidden}
-.story img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain}
-.story.has-photo small{z-index:1;background:#241421b8;color:white;border-radius:12px;padding:2px 6px}
 .edit-launch{display:block;margin:21px auto 0;border:1px solid #fff9;background:#fff7;border-radius:100px;padding:10px 17px;font-size:.78rem}
 dialog{width:min(660px,calc(100% - 24px));max-height:86svh;padding:22px;border:1px solid white;border-radius:27px;background:#fff5f8;color:var(--ink);box-shadow:0 20px 100px #30102860}
 dialog::backdrop{background:#28132678;backdrop-filter:blur(8px)}
@@ -145,9 +159,16 @@ dialog::backdrop{background:#28132678;backdrop-filter:blur(8px)}
 </header>
 <main class="grid">
   <div class="intro">
+    <div class="profile-portrait" aria-hidden="true"><img id="profile-photo" hidden alt=""><svg class="ico"><use href="#i-heart"/></svg></div>
+    <p class="profile-name">Noquito &amp; noquita</p>
     <p class="eyebrow"><span aria-hidden="true">✦</span> Edición 07 · Para mi noquita</p>
     <h1>7 meses,<br> <em>7 razones.</em></h1>
     <p class="lede">Un álbum de las pequeñas cosas que hacen que te siga eligiendo.</p>
+    <dl class="profile-stats" aria-label="Nuestro álbum">
+      <div><dt>07</dt><dd>Meses juntos</dd></div>
+      <div><dt>07</dt><dd>Razones</dd></div>
+      <div><dt>02</dt><dd>Noquitos</dd></div>
+    </dl>
     <div class="stories-head"><span>Nuestras historias</span><span>07 para descubrir</span></div>
     <nav class="stories" id="stories" aria-label="Las siete razones"></nav>
   </div>
@@ -215,13 +236,13 @@ const initialHTML="<!doctype html>\n"+document.documentElement.outerHTML;
 const photoData=JSON.parse(document.getElementById("photo-data").textContent);
 
 const reasons=[
-  ["Tu risa","Me gusta el segundo justo antes de que te rías, cuando ya sé que no te vas a aguantar. A veces me da más risa verte a ti que el chiste."],
-  ["Lo fácil que es ser yo contigo","Contigo puedo decir una bobada, cambiar de tema tres veces y volver al primero. Me gusta poder hablarte sin ensayar lo que voy a decir."],
-  ["Los días normales","Me gusta cuando el plan es cualquier cosa con tal de vernos. Hay días de los que ni me acuerdo qué hicimos, pero sí de lo contento que volví."],
-  ["Lo mucho que me gusta escucharte","Me gusta cuando me dices «te cuento rápido» y terminamos hablando de cinco cosas más. Si se nos hace tarde, casi nunca soy yo el que quiere colgar."],
-  ["Tu forma de cuidar","Me gusta que preguntes cómo estoy y te quedes a escuchar la respuesta de verdad. Quiero aprender a cuidarte con esa misma atención."],
-  ["Lo que todavía descubro de ti","Me gusta que después de siete meses todavía me sorprendas. A veces es una opinión que no esperaba; otras, una historia que no me habías contado."],
-  ["Las ganas de volver a verte","Hay algo que todavía me pasa: a veces apenas nos despedimos y ya estoy pensando en cuándo nos vemos otra vez."]
+  ["Tu risa", "De las primeras cosas que me fijé de ti. De las cosas que más amo cuando te veo todos los días. Me encanta hacerte reír para ver tu sonrisa."],
+  ["Lo fácil que es ser yo contigo", "Siempre somos autistas con confianza porque nos tenemos confianza y nos sentimos bien siendo nosotros mismos. Es algo único y diferente que caracteriza nuestra relación."],
+  ["Los días normales", "Incluso en los momentos que no estamos en una cita o plan romántico, el simple hecho de que estemos juntos ya es especial y significa mucho para mí. Contigo todo el aburrimiento desaparece."],
+  ["Lo mucho que me gusta escucharte", "Amo que me cuentes todas tus historias, porque me encanta saber lo que sucede en tu vida y lo que te hace feliz y te divierte. Trato de hacer lo mismo en ese aspecto porque sé que es importante para ti y me esforzaré para eso."],
+  ["Tu forma de amar", "Me haces muy feliz cuando te preocupas por mi, cuando me pides que estudie, cuando me preguntas como estoy, cuando escuchas y soportas mis problemas. Todo eso hace parte de tu forma de amarme y estar pendiente de mi, lo cual aprecio mucho."],
+  ["Lo que todavía descubro de ti", "Cada día tengo algo nuevo que aprender sobre ti, soy feliz de conocerte cada vez más y aunque nunca se puede llegar a conocer totalmente a alguien, me encanta vivir esta aventura solo contigo, y que tú seas mi compañera."],
+  ["Las ganas de volver a verte", "Hay momentos en los que no podemos estar juntos, y aunque es deprimente, nos seguimos amando desde la distancia, nos escribimos y hacemos llamadas. Amo nuestras llamadas porque es tiempo de calidad que pasamos tu y yo. Además de que aunque sea triste el hecho de estar separados, sabemos que más pronto de lo que parece nos volveremos a encontrar."]
 ];
 const letter=["Qué suerte la mía.","Amor, cuando pienso en estos siete meses, me quedo con lo bien que se siente compartir contigo hasta lo más sencillo. Gracias por dejarme conocerte de a poquito y por darme ganas de contarte siempre cómo me fue. Me hace ilusión todo lo que todavía nos queda por vivir. Felices siete meses. Te quiero. ♡"];
 const photos=photoData.reasons;
@@ -239,6 +260,11 @@ const $=id=>document.getElementById(id);
 const svgIcon=name=>'<svg class="ico" aria-hidden="true"><use href="#i-'+name+'"/></svg>';
 const stories=$("stories"), art=$("art"), card=$("card"), photo=$("photo"), pageButtons=document.querySelectorAll("[data-go]");
 const title=$("title"), seen=new Set();
+const profilePhoto=$("profile-photo");
+if(photoData.cover){
+ profilePhoto.src=photoData.cover.src;profilePhoto.hidden=false;
+ profilePhoto.nextElementSibling.setAttribute("hidden","");
+}
 let page=-1, lastReason=0;
 function paint(element, palette){
  const [,tone,light,deep,dark]=palette;
