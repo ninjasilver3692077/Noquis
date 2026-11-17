@@ -70,6 +70,11 @@ h1 em{font-style:normal;font-weight:inherit;white-space:nowrap}
 .meta{display:flex;align-items:center;gap:6px;width:fit-content;background:#fbe5f6;color:#954d89;padding:6px 10px;border-radius:100px;font-size:.61rem;letter-spacing:.035em;font-weight:650;margin-bottom:13px}
 h2{font-size:clamp(1.5rem,2.8vw,2rem);line-height:1.13;letter-spacing:-.055em}
 .message{margin-top:12px;font-size:.9rem;line-height:1.75;color:#686471;max-width:58ch}
+/* Let the letter grow with its text, with a compact illustration above it. */
+body[data-page=carta] .cover-art{min-height:150px;height:150px;aspect-ratio:auto}
+body[data-page=carta] .symbol-art .ico{width:64px;height:64px}
+body[data-page=carta] .card-body{padding:clamp(22px,3vw,36px)}
+body[data-page=carta] .message{white-space:pre-line;font-size:1rem;line-height:1.85;color:#48414f;max-width:62ch;overflow-wrap:anywhere}
 .controls{display:flex;gap:9px;margin-top:22px}
 .pill{display:flex;align-items:center;justify-content:space-between;gap:10px;min-height:49px;border:0;border-radius:100px;padding:6px 6px 6px 20px;background:var(--accent);color:white;font-size:.81rem;font-weight:650;flex:1;text-align:left;transition:background .2s,transform .2s}
 .pill:hover{background:#003bda;transform:translateY(-1px)}
@@ -244,7 +249,7 @@ const reasons=[
   ["Lo que todavía descubro de ti", "Cada día tengo algo nuevo que aprender sobre ti, soy feliz de conocerte cada vez más y aunque nunca se puede llegar a conocer totalmente a alguien, me encanta vivir esta aventura solo contigo, y que tú seas mi compañera."],
   ["Las ganas de volver a verte", "Hay momentos en los que no podemos estar juntos, y aunque es deprimente, nos seguimos amando desde la distancia, nos escribimos y hacemos llamadas. Amo nuestras llamadas porque es tiempo de calidad que pasamos tu y yo. Además de que aunque sea triste el hecho de estar separados, sabemos que más pronto de lo que parece nos volveremos a encontrar."]
 ];
-const letter=["Qué suerte la mía.","Amor, cuando pienso en estos siete meses, me quedo con lo bien que se siente compartir contigo hasta lo más sencillo. Gracias por dejarme conocerte de a poquito y por darme ganas de contarte siempre cómo me fue. Me hace ilusión todo lo que todavía nos queda por vivir. Felices siete meses. Te quiero. ♡"];
+const letter=["Qué suerte la mía.", "Mi corazón, en este séptimo mes de relación quiero darte esta página web como regalo, quise sacar mis conocimientos de informático, y así evolucionar los html a una página más completa, espero que te guste jsjsjs. Aún no puedo creer que ya hayan pasado 7 meses desde que nos volvimos noquitos, el tiempo pasa realmente rápido y he disfrutado cada momento que hemos pasado juntos. No me canso de repetirte lo mucho que te amo y lo mucho que has cambiado mi vida. Literal no sé que haría si no te tuviera. Por eso siempre trato de hacerte sentir amada por mi. Eres mi novia, y más que mi novia quiero tener un futuro contigo, es mi mayor objetivo, porque le has dado color a mi vida, y porque contigo he conocido mucho y hemos hecho muchos planes. Amo que logremos resolver nuestros problemas, porque aunque los tengamos, lo importante es que no pasan a nada grave y entendemos que nuestro amor es mucho más fuerte.\n\nFelices 7 meses de noquitos amor, vamos por más\n\nMuejejejeje."];
 const photos=photoData.reasons;
 const styles=[
  ["smile","#ee9ab7","#ffe1cd","#f3acc6","#7d2850"],
